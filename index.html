@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            height: 20vh;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        section#area_cartelas {
+            width: 70%;
+            height: 75vh;
+            background-color: rgb(43, 255, 0);
+        }
+
+        div#header_cartelas,
+        div#header_numeros {
+            width: 100%;
+            height: 20%;
+            background-color: rgb(65, 0, 243);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        div#body_cartelas {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        div.Cartela {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+        }
+
+        div.Cartela h4 {
+            margin-bottom: 5px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            background-color: rgb(255, 0, 200);
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        section#area_numeros {
+            width: 30%;
+            height: 75vh;
+            background-color: rgb(255, 238, 81);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0px;
+            height: 5vh;
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .show {
+            background-color: rgb(255, 143, 143);
+            color: black;
+        }
+
+        #numeros {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="index.js"></script>
+    <title>Bingo</title>
+</head>
+
+<body>
+    <header>
+        <h1>Bingo</h1>
+    </header>
+    <main>
+        <section id="area_cartelas">
+            <div id="header_cartelas">
+                <h3>Cartelas</h3>
+                <input type="text" id="nome" placeholder="escreve teu nome">
+
+                <button onclick="gerarCartela()">Gerar Cartela</button>
+                <button onclick="reiniciar()">Reiniciar</button>
+                <button onclick="apagarCartelas()">Apagar cartelas</button>
+            </div>
+
+            <div id="cartelas"></div>
+        </section>
+        <section id="area_numeros">
+            <div id="header_numeros">
+                <button onclick="sortearNumero()">Jogar</button>
+            </div>
+
+            <div id="numeros"></div>
+        </section>
+    </main>
+</body>
+
+</html>
