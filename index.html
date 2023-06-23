@@ -11,7 +11,7 @@
             box-sizing: border-box;
         }
 
-        header {
+        .header {
             height: 20vh;
             width: 100%;
             background-color: rgb(255, 255, 255);
@@ -26,14 +26,14 @@
             width: 100%;
         }
 
-        section#area_cartelas {
+        section#cartelas-area {
             width: 70%;
             height: 75vh;
             background-color: rgb(43, 255, 0);
         }
 
-        div#header_cartelas,
-        div#header_numeros {
+        div#cartelas-header,
+        div#numbers-header {
             width: 100%;
             height: 20%;
             background-color: rgb(65, 0, 243);
@@ -42,7 +42,7 @@
             justify-content: space-around;
         }
 
-        div#body_cartelas {
+        div#cartelas-body {
             display: flex;
             flex-wrap: wrap;
             padding: 10px;
@@ -50,7 +50,7 @@
             justify-content: space-around;
         }
 
-        div.Cartela {
+        div.cartela {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -58,7 +58,7 @@
             margin: 5px;
         }
 
-        div.Cartela h4 {
+        div.cartela h4 {
             margin-bottom: 5px;
         }
 
@@ -85,7 +85,7 @@
             border-radius: 20px;
         }
 
-        section#area_numeros {
+        section#numbers-area {
             width: 30%;
             height: 75vh;
             background-color: rgb(255, 238, 81);
@@ -107,7 +107,7 @@
             color: black;
         }
 
-        #numeros {
+        #number-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
@@ -122,14 +122,14 @@
 </head>
 
 <body>
-    <header>
+    <div class="header">
         <h1>Bingo</h1>
-    </header>
+    </div>
     <main>
-        <section id="area_cartelas">
-            <div id="header_cartelas">
+        <section id="cartelas-area">
+            <div id="cartelas-header">
                 <h3>Cartelas</h3>
-                <input type="text" id="nome" placeholder="escreve teu nome">
+                <input type="text" id="nome" placeholder="Digite seu nome">
 
                 <button onclick="gerarCartela()">Gerar Cartela</button>
                 <button onclick="reiniciar()">Reiniciar</button>
@@ -138,12 +138,12 @@
 
             <div id="cartelas"></div>
         </section>
-        <section id="area_numeros">
-            <div id="header_numeros">
+        <section id="numbers-area">
+            <div id="numbers-header">
                 <button onclick="sortearNumero()">Jogar</button>
             </div>
 
-            <div id="numeros"></div>
+            <div id="number-container"></div>
         </section>
     </main>
 </body>
